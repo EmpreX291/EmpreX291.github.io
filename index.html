@@ -1,344 +1,400 @@
-<!doctype html>
-<html lang="uk">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Будинок культури «Хорішки» — події, гуртки, контакти</title>
-  <meta name="description" content="Офіційна сторінка ДК села Хорішки: розклад подій, гуртки, новини, оренда зали, контакти." />
-  <meta property="og:title" content="Будинок культури «Хорішки»" />
-  <meta property="og:description" content="Події, гуртки, новини, оренда зали, контакти." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%232d6cdf'/%3E%3Ctext x='32' y='40' font-size='28' text-anchor='middle' fill='white'%3EDK%3C/text%3E%3C/svg%3E">
-  <style>
-    :root{ --bg:#f7f7fb; --fg:#111; --muted:#555; --brand:#2d6cdf; --brand2:#1ea672; --card:#fff; --border:#e6e6ef; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg)}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);z-index:10}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .nav a.logo{font-weight:800;letter-spacing:.3px;color:#111}
-    .nav nav a{margin:0 10px;font-weight:600;color:#222}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;padding:42px 0 28px}
-    .badge{display:inline-block;background:#ffe89a;padding:6px 10px;border-radius:999px;font-weight:700;color:#734600;margin-bottom:10px}
-    h1{font-size:clamp(28px, 2.8vw, 44px);margin:10px 0 12px}
-    .lead{color:var(--muted);font-size:1.05rem;line-height:1.6}
-    .cta-row{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#fff;font-weight:700}
-    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
-    .btn.success{background:var(--brand2);border-color:var(--brand2);color:#fff}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    .grid{display:grid;gap:16px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    section{padding:26px 0}
-    h2{font-size:clamp(22px,2.2vw,32px);margin:8px 0 12px}
-    .muted{color:var(--muted)}
-    .list{display:grid;gap:10px}
-    .event{display:flex;gap:12px}
-    .date{min-width:68px;text-align:center;background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px 10px}
-    .date b{display:block;font-size:20px}
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
-    footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:.95rem}
-    .map{border:0;width:100%;height:320px;border-radius:16px}
-    form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    form label{display:block;font-weight:600;margin:8px 0 6px}
-    input,textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#fff}
-    textarea{min-height:120px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:#fff}
-    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid.cols-3{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)} }
-  </style>
 
-  <!-- === Injected: SEO / Social / Preconnect === -->
-  <link rel="canonical" href="https://YOUR_USERNAME.github.io/YOUR_REPO/">
-  <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/">
-  <meta property="og:image" content="https://YOUR_USERNAME.github.io/YOUR_REPO/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#2d6cdf">
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ДК «Хорішки» — Афіша, події, контакти</title>
+  <meta name="description" content="Офіційний сайт ДК «Хорішки». Афіша подій, новини, контакти та оренда залу.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#2151d1">
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://docs.google.com" crossorigin>
-  <!-- === Styles: accessibility / sticky anchors / map === -->
+  <link rel="canonical" href="https://YOUR_USERNAME.github.io/YOUR_REPO/">
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/">
+  <meta property="og:title" content="ДК «Хорішки» — Афіша та події">
+  <meta property="og:description" content="Культурні події, концерти та гуртки у Хорішках.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    .skip-link { position: absolute; left: -9999px; top: auto; }
-    .skip-link:focus { left: 16px; top: 16px; background: #fff; padding: 8px 12px; border-radius: 8px;
-                       box-shadow: 0 2px 8px rgba(0,0,0,.15); z-index: 10000; }
-    :focus-visible { outline: 2px solid #2d6cdf; outline-offset: 2px; }
-    section { scroll-margin-top: 80px; }
-    .map { border: 0; width: 100%; height: 320px; border-radius: 16px; }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    :root{
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --text: #e6ecff;
+      --muted: #9fb3d5;
+      --brand: #2151d1;
+      --brand-2:#3aa6ff;
+      --ring: 0 0 0 2px rgba(58,166,255,.35), 0 10px 30px rgba(33,81,209,.25);
     }
+    [data-theme="light"]{
+      --bg: #f5f7ff;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #2151d1;
+      --brand-2:#3aa6ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,18,32,.9), rgba(11,18,32,.6));
+      backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.15);padding:10px 14px;border-radius:12px;transition:.2s;cursor:pointer}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:#fff}
+    .theme-toggle{border:1px solid rgba(255,255,255,.15);padding:8px 10px;border-radius:10px;cursor:pointer}
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .bg{
+      position:absolute;inset:0;
+      background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop');
+      background-size:cover;background-position:center;
+      filter:brightness(.55) saturate(1.1);
+    }
+    .hero .overlay{position:absolute;inset:0;background:radial-gradient(50% 70% at 50% 20%, rgba(58,166,255,.35), transparent),linear-gradient(180deg, rgba(11,18,32,.0), var(--bg) 85%);}
+    .hero .inner{position:relative;padding:96px 0 40px}
+    .headline{font-size:clamp(28px,4vw,46px);line-height:1.1;font-weight:800;letter-spacing:.2px}
+    .sub{color:var(--muted);max-width:720px}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    /* Sections */
+    section{scroll-margin-top:80px;padding:40px 0}
+    h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 18px 0}
+    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    /* Events */
+    .filters{display:grid;grid-template-columns:1fr 160px 160px auto;gap:10px;margin-bottom:14px}
+    .filters input,.filters select{width:100%;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit;padding:10px 12px;border-radius:12px;outline:0}
+    .filters input:focus,.filters select:focus{box-shadow:var(--ring)}
+    .events{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:920px){.events{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.events{grid-template-columns:1fr}.nav-links{display:none}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .card-img{aspect-ratio:16/9;background:#0b1220;overflow:hidden}
+    .card-body{padding:12px}
+    .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:4px 8px}
+    .card-actions{display:flex;gap:8px;margin-top:auto;padding:12px}
+    .card-actions .btn{flex:1;justify-content:center}
+    /* Map & gallery */
+    .map{border:0;width:100%;height:340px;border-radius:16px}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    @media (max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .gallery a{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+    /* Lightbox */
+    dialog.lightbox{border:0;padding:0;background:rgba(0,0,0,.9);width:100%;height:100%}
+    dialog::backdrop{background:rgba(0,0,0,.85)}
+    .lightbox img{max-width:92vw;max-height:86vh;margin:auto;display:block}
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
+    /* A11y & motion */
+    :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
   </style>
-
 </head>
 <body>
-<a class="skip-link" href="#afisha">Пропустити до контенту</a>
-
+  <a class="skip-link" href="#afisha">Пропустити до контенту</a>
   <header>
     <div class="container nav">
-      <a class="logo" href="#">ДК «Хорішки»</a>
-      <nav>
-        <a href="#about">Про нас</a>
-        <a href="#afisha">Афіша</a>
-        <a href="#clubs">Гуртки</a>
-        <a href="#news">Новини</a>
-        <a href="#contacts">Контакти</a>
+      <div class="logo"><div class="logo-badge">ДК</div> ДК «Хорішки»</div>
+      <nav class="nav-links">
+        <a href="#afisha" class="btn">Афіша</a>
+        <a href="#contacts" class="btn">Контакти</a>
+        <a href="#map" class="btn">Локація</a>
+        <button id="themeBtn" class="theme-toggle" aria-label="Змінити тему">🌓</button>
+        <a class="btn primary" href="#contactForm">Забронювати зал</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <span class="badge">Офіційна сторінка</span>
-        <h1>Будинок культури села Хорішки</h1>
-        <p class="lead">Події, гуртки для дітей і дорослих, свята, кіно, майстер‑класи, оренда зали. Разом оживляємо життя громади!</p>
-        <div class="cta-row">
-          <a class="btn primary" href="#afisha">Дивитися афішу</a>
-          <a class="btn success" href="#contacts">Забронювати залу</a>
-        </div>
-        <p class="muted" style="margin-top:10px">Адреса: <span class="pill">Полтавська обл., с. Хорішки, вул. Центральна, 1</span></p>
-		<p class="muted" style="margin-top:10px">Графік: <span class="pill">Пн–Пт 9:00–18:00</span></p>
+  <section class="hero">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="overlay"></div>
+    <div class="container inner">
+      <h1 class="headline">Події, що об’єднують громаду</h1>
+      <p class="sub">Концерти, кіно, гуртки та свята в серці нашого села. Обирайте, бронюйте — і приходьте з родиною та друзями!</p>
+      <div class="cta">
+        <a href="#afisha" class="btn primary">Переглянути афішу</a>
+        <a href="#contacts" class="btn">Написати нам</a>
       </div>
-      <div class="card">
-        <h3 style="margin:6px 0 8px">Ближчі події</h3>
-        <div id="events-dynamic" class="list"></div>
-        <noscript><p class="muted">Увімкніть JavaScript, щоб побачити актуальні події.</p></noscript>
-        <div style="margin-top:10px"><a href="#afisha">Повний розклад →</a></div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="afisha">
+  <section id="afisha">
+    <div class="container">
       <h2>Афіша</h2>
-      <div id="events-grid" class="grid cols-3"></div>
-    </section>
-
-    <section id="clubs">
-      <h2>Гуртки та студії</h2>
-      <div id="clubs-dynamic" class="grid cols-3"></div>
-      <noscript><p class="muted">Увімкніть JavaScript, щоб побачити актуальні гуртки.</p></noscript>
-    </section>
-
-    <section id="news">
-      <h2>Новини</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <b>🔧 Ремонт сцени — старт</b>
-          <p class="muted">Почалися роботи з оновлення сцени та освітлення. Потрібні помічники на вихідні!</p>
+      <div class="panel">
+        <div class="filters">
+          <input id="q" type="search" placeholder="Пошук подій (назва, опис)…" aria-label="Пошук">
+          <input id="from" type="date" aria-label="Від дати">
+          <select id="category" aria-label="Категорія">
+            <option value="">Усі категорії</option>
+            <option>Концерт</option>
+            <option>Кіно</option>
+            <option>Гурток</option>
+            <option>Свято</option>
+          </select>
+          <button id="reset" class="btn" type="button">Скинути</button>
         </div>
-        <div class="card">
-          <b>🎬 Кінопроектор отримано</b>
-          <p class="muted">Завдяки благодійникам маємо новий проектор. Вже цієї п’ятниці — перший кінопоказ.</p>
+        <div id="events" class="events" role="list"></div>
+        <div id="empty" style="display:none;color:var(--muted);padding:10px">Поки що немає подій за вашим фільтром.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <a href="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop" class="gl">
+          <img loading="lazy" decoding="async" alt="Сцена" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop">
+        </a>
+        <a href="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1600&auto=format&fit=crop" class="gl">
+          <img loading="lazy" decoding="async" alt="Зал" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600&auto=format&fit=crop">
+        </a>
+        <a href="https://images.unsplash.com/photo-1540030521459-3c041aa4b7f2?q=80&w=1600&auto=format&fit=crop" class="gl">
+          <img loading="lazy" decoding="async" alt="Свято" src="https://images.unsplash.com/photo-1540030521459-3c041aa4b7f2?q=80&w=600&auto=format&fit=crop">
+        </a>
+        <a href="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1600&auto=format&fit=crop" class="gl">
+          <img loading="lazy" decoding="async" alt="Гурток" src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=600&auto=format&fit=crop">
+        </a>
+      </div>
+    </div>
+    <dialog id="lightbox" class="lightbox"><img alt=""><form method="dialog"><button class="btn" style="position:fixed;right:16px;top:16px">Закрити</button></form></dialog>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <h2>Де ми знаходимось</h2>
+      <div class="panel">
+        <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10101.0!2d33.0!3d49.0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0KXQvtC70LHQtdC60LAg0JrRgNC10LHQsNC30LjRjw!5e0!3m2!1suk!2sua!4v1680000000000">
+        </iframe>
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.google.com/maps/dir/?api=1&destination=ДК%20Хорішки">Прокласти маршрут</a>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://maps.apple.com/?q=ДК%20Хорішки">Відкрити в Apple Maps</a>
         </div>
       </div>
-      <div class="gallery" style="margin-top:12px">
-        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop" alt="Сцена"/>
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Концерт"/>
-        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1200&auto=format&fit=crop" alt="Майстер-клас"/>
-        <img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?q=80&w=1200&auto=format&fit=crop" alt="Зала"/>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contacts">
-      <h2>Контакти та оренда зали</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <form name="contact" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-<input type="text" name="_honey" style="display:none">
-<input type="hidden" name="_subject" value="Заявка з сайту ДК «Хорішки»">
-
-            <input type="hidden" name="form-name" value="contact" />
-            <div class="row">
-              <div>
-                <label>Ваше ім’я</label>
-                <input name="name" required />
-              </div>
-              <div>
-                <label>Телефон або email</label>
-                <input name="contact" required />
-              </div>
+  <section id="contacts">
+    <div class="container">
+      <h2>Контакти та бронювання</h2>
+      <div class="panel" id="contactForm">
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_subject" value="Заявка з сайту ДК «Хорішки»">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <label>Ваше ім’я</label>
+              <input name="name" required style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit">
             </div>
-            <label>Повідомлення</label>
-            <textarea name="message" placeholder="Хочу забронювати залу 10 листопада…" required></textarea>
-            <div class="cta-row">
-              <button class="btn primary" type="submit">Надіслати</button>
-              <a class="btn" href="mailto:dk.horyshky@example.com">Написати на email</a>
+            <div>
+              <label>Телефон або email</label>
+              <input name="contact" required style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit">
             </div>
-            <p class="muted">Подаючи форму, ви погоджуєтесь з обробкою персональних даних.</p>
-          </form>
-        </div>
-        <div class="card">
-          <p><b>Адреса:</b> Полтавська обл., с. Хорішки, вул. Центральна, 1</p>
-          <p><b>Телефон:</b> +380 00 000 00 00</p>
-          <p><b>Telegram:</b> <a href="https://t.me/yourchannel" target="_blank" rel="noopener">@yourchannel</a></p>
-          <p><b>YouTube:</b> <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener">/ @yourchannel</a></p>
-			<!--<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=33.82090687751771%2C49.37126434192374%2C33.82538616657258%2C49.372818732282695&marker=49.372075%2C33.823195&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=19/49.372042/33.823147">Посмотреть более крупную карту</a></small>-->
-			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1651.0308186372786!2d33.82321270016559!3d49.372230210337776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sde!4v1761764048623!5m2!1sru!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+          </div>
+          <label style="display:block;margin-top:10px">Повідомлення</label>
+          <textarea name="message" required rows="4" style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit"></textarea>
+          <div class="cta" style="margin-top:10px">
+            <button class="btn primary" type="submit">Надіслати</button>
+            <a class="btn" href="mailto:dk.horyshky@example.com">Написати на e‑mail</a>
+            <a class="btn" href="tel:+380000000000">Подзвонити</a>
+          </div>
+        </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      © <span id="year"></span> ДК «Хорішки». Зроблено з ♥ для громади.
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> ДК «Хорішки». Усі права захищено.</div>
+      <div style="display:flex;gap:8px">
+        <a class="btn" target="_blank" rel="noopener noreferrer" href="https://t.me/">Telegram</a>
+        <a class="btn" target="_blank" rel="noopener noreferrer" href="https://facebook.com/">Facebook</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // === Динамічний контент із Google Sheets через CSV (працює на Netlify/Cloudflare) ===
-    // Вкажіть базову опубліковану адресу БЕЗ "/pubhtml" наприкінці
-    // Напр.: https://docs.google.com/spreadsheets/d/e/2PACX-... (без /pubhtml)
-    const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8HWUpRCUDfWqzWFvzGV-oN2RQDZIRrPu3fn2XERUS40gOobu07_C438dwXk-UnbiZgDWc4q365kc2';
-    // Підставте реальні gid аркушів (див. параметр gid= у /pubhtml для кожної вкладки)
-    const GID_EVENTS = 1962718832; // ← gid вкладки Events
-    const GID_CLUBS  = 2048496614; // ← gid вкладки Clubs
-
-    function csvUrl(gid){
-      return `${SHEET_BASE}/pub?gid=${gid}&single=true&output=csv`;
-    }
-
-    // Простий CSV‑парсер із підтримкою лапок
-    function parseCSV(text){
-      const rows=[]; let i=0,cur='',inQ=false,row=[]; const n=text.length;
-      while(i<n){ const ch=text[i];
-        if(ch==='"'){ if(inQ && text[i+1]==='"'){cur+='"'; i+=2; continue;} inQ=!inQ; i++; continue; }
-        if(!inQ && ch===','){ row.push(cur); cur=''; i++; continue; }
-        if(!inQ && (ch==='\n'||ch==='\r')){ if(cur!==''||row.length){row.push(cur); rows.push(row); row=[]; cur='';}
-          while(i<n && (text[i]=='\n'||text[i]=='\r')) i++; continue; }
-        cur+=ch; i++; }
-      if(cur!==''||row.length){ row.push(cur); rows.push(row);} if(!rows.length) return [];
-      const headers = rows.shift().map(h=>h.trim());
-      return rows.map(r=>Object.fromEntries(headers.map((h,idx)=>[h,(r[idx]||'').trim()])));
-    }
-	
-	function isPublicFlag(v) {
-	  if (v == null) return false;
-	  const s = String(v).trim().toLowerCase();
-	  return s === 'так' || s === 'true' || s === '1' || s === 'yes' || s === 'y' || s === 'да';
-	}
-
-    function monthShort(d){ return ['січ','лют','бер','кві','тра','чер','лип','сер','вер','жов','лис','гру'][d.getMonth()]; }
-
-    function renderEventsList(items){
-      const root = document.getElementById('events-dynamic'); if(!root) return;
-      root.innerHTML='';
-      const today=new Date(); today.setHours(0,0,0,0);
-      items.filter(x=>x.Date||x.Title)
-           .map(x=>({ date:x.Date?new Date(x.Date+'T00:00:00'):null, title:x.Title||'', time:x.Time||'', price:x.PriceTag||'', public: x.Public }))
-		   .filter(x => isPublicFlag(x.public))
-           .filter(x=>!x.date || x.date>=today)
-           .sort((a,b)=>(a.date?.getTime()||0)-(b.date?.getTime()||0))
-           .slice(0,6)
-           .forEach(ev=>{
-             const d=ev.date; const dd=d?String(d.getDate()).padStart(2,'0'):'--'; const mm=d?monthShort(d):'';
-             const el=document.createElement('div'); el.className='event';
-             el.innerHTML=`<div class="date"><b>${dd}</b>${mm}</div><div><b>${ev.title}</b><div class="muted">${ev.time?ev.time+' · ':''}${ev.price}</div></div>`;
-             root.appendChild(el);
-           });
-      if(!root.children.length){ root.innerHTML='<p class="muted">Наразі немає запланованих подій.</p>'; }
-    }
-
-    function renderEventsGrid(items){
-      const root = document.getElementById('events-grid'); if(!root) return;
-      root.innerHTML='';
-      const today=new Date(); today.setHours(0,0,0,0);
-      items.filter(x=>x.Date||x.Title)
-           .map(x=>({ date:x.Date?new Date(x.Date+'T00:00:00'):null, title:x.Title||'', time:x.Time||'', price:x.PriceTag||'', public: x.Public }))
-		   .filter(x => isPublicFlag(x.public))
-           .filter(x=>!x.date || x.date>=today)
-           .sort((a,b)=>(a.date?.getTime()||0)-(b.date?.getTime()||0))
-           .forEach(ev=>{
-             const d=ev.date; const dd=d?String(d.getDate()).padStart(2,'0'):'--'; const mm=d?monthShort(d):'';
-             const card=document.createElement('div'); card.className='card';
-             card.innerHTML=`<div class="event"><div class="date"><b>${dd}</b>${mm}</div><div><b>${ev.title}</b><div class="muted">${ev.time?ev.time+' · ':''}${ev.price}</div></div></div>`;
-             root.appendChild(card);
-           });
-      if(!root.children.length){ root.innerHTML='<p class="muted">Поки немає подій для відображення.</p>'; }
-    }
-
-    function renderClubs(items){
-      const root = document.getElementById('clubs-dynamic'); if(!root) return;
-      root.innerHTML='';
-      const visible = items
-		.filter(r => isPublicFlag(r.Public))   // ← тільки публічні
-		.filter(r => (r.Name || '').trim() !== '');
-
-	  visible.forEach(x => {
-		const card = document.createElement('div');
-		card.className = 'card';
-		card.innerHTML = `<h3>${x.Name}</h3><p class="muted">${x.Subtitle || ''}</p>`;
-		root.appendChild(card);
-	  });
-
-      if(!root.children.length){ root.innerHTML='<p class="muted">Гуртки будуть оголошені найближчим часом.</p>'; }
-    }
-
-    async function loadCSV(url){ const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status); return parseCSV(await res.text()); }
-
-    async function init(){
-      try{
-        const [events, clubs] = await Promise.all([
-          loadCSV(csvUrl(GID_EVENTS)),
-          loadCSV(csvUrl(GID_CLUBS)),
-        ]);
-        renderEventsList(events);    // у блоці "Ближчі події"
-        renderEventsGrid(events);    // у секції Афіша
-        renderClubs(clubs);
-      }catch(e){ console.error('Помилка завантаження CSV:', e); }
-    }
-
-    init();
-  </script>
-
-  <!-- === Helpers: lazy-load images, JSON-LD events, Service Worker === -->
-  <script>
-  // Add lazy-loading & async decoding to images (progressive enhancement)
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('img:not([loading])').forEach(function(img){
-      img.setAttribute('loading','lazy');
-      img.setAttribute('decoding','async');
+    // Theme toggle
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) root.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeBtn').addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
     });
-  });
-  // JSON-LD injection for upcoming events
-  function injectEventsJsonLd(items){
-    try {
-      var today = new Date(); today.setHours(0,0,0,0);
-      var evs = (items||[]).filter(function(x){ return x && x.Date; })
-        .map(function(x){
-          var time = (x.Time && /^[0-2]\d:[0-5]\d$/.test(x.Time)) ? 'T'+x.Time : '';
-          return {
-            "@type": "Event",
-            "name": x.Title || "",
-            "startDate": x.Date + time,
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "location": {
-              "@type":"Place",
-              "name":"ДК «Хорішки»",
-              "address":"Полтавська обл., с. Хорішки, вул. Центральна, 1"
-            },
-            "organizer":{"@type":"Organization","name":"ДК «Хорішки»"}
-          };
-        }).slice(0, 10);
-      if (!evs.length) return;
-      var el = document.createElement('script');
-      el.type = 'application/ld+json';
-      el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","itemListElement": evs});
-      document.head.appendChild(el);
-    } catch(e){ console.warn('JSON-LD skipped', e); }
-  }
-  // Try to inject if a global events array exists
-  try { if (window.events && Array.isArray(window.events)) injectEventsJsonLd(window.events); } catch(e){}
-  </script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js').catch(function(err){ console.warn('SW registration failed', err); });
-    }
-  </script>
 
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    document.querySelectorAll('.gl').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        lb.querySelector('img').src = a.href;
+        lb.showModal();
+      });
+    });
+
+    // Events data: CSV or window.events
+    const EVENTS_CSV_URL = ""; // <- вставь сюди публічний CSV Google Sheets або залиш без змін, якщо використовуєш window.events
+    const fallbackEvents = [
+      { Title: "Концерт до Дня села", Date: "2025-11-15", Time: "18:00", Category: "Концерт", Description: "Святковий виступ місцевих колективів.", Price: "Вхід вільний" },
+      { Title: "Кіно-вечір", Date: "2025-11-20", Time: "19:00", Category: "Кіно", Description: "Сімейний фільм у великому залі.", Price: "50 грн" },
+      { Title: "Майстер-клас з малювання", Date: "2025-11-22", Time: "14:00", Category: "Гурток", Description: "Для дітей 7–12 років.", Price: "Безкоштовно" }
+    ];
+
+    const qs = s => document.querySelector(s);
+    const qsa = s => Array.from(document.querySelectorAll(s));
+
+    function csvToJson(text){
+      const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter(Boolean);
+      const head = lines.shift().split(',').map(s=>s.trim());
+      return lines.map(l => {
+        const cols = []; let cur = '', inQ = false;
+        for(let i=0;i<l.length;i++){
+          const ch = l[i];
+          if(ch === '"'){ inQ = !inQ; continue; }
+          if(ch === ',' && !inQ){ cols.push(cur); cur=''; continue; }
+          cur += ch;
+        }
+        cols.push(cur);
+        const obj = {};
+        head.forEach((h,idx)=>obj[h]= (cols[idx]||'').trim());
+        return obj;
+      });
+    }
+
+    async function loadEvents(){
+      try{
+        if(Array.isArray(window.events)) return window.events;
+        if(EVENTS_CSV_URL){
+          const res = await fetch(EVENTS_CSV_URL, {cache:'no-store'});
+          if(!res.ok) throw new Error('HTTP '+res.status);
+          return csvToJson(await res.text());
+        }
+      }catch(e){ console.warn('CSV load failed', e); }
+      return fallbackEvents;
+    }
+
+    function render(events){
+      const q = qs('#q').value.toLowerCase();
+      const from = qs('#from').value ? new Date(qs('#from').value) : null;
+      const cat = qs('#category').value;
+      const list = qs('#events');
+      const empty = qs('#empty');
+      list.innerHTML = '';
+
+      const filtered = events.filter(ev => {
+        const text = (ev.Title||'') + ' ' + (ev.Description||'');
+        const okQ = !q || text.toLowerCase().includes(q);
+        const okC = !cat || (ev.Category||'').toLowerCase() === cat.toLowerCase();
+        const d = ev.Date ? new Date(ev.Date) : null;
+        const okD = !from || (d && d >= from);
+        return okQ && okC && okD;
+      });
+
+      empty.style.display = filtered.length ? 'none' : 'block';
+
+      filtered.sort((a,b)=> (a.Date||'').localeCompare(b.Date||''));
+
+      for(const ev of filtered){
+        const img = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop";
+        const date = ev.Date || '';
+        const time = ev.Time || '';
+        const title = ev.Title || 'Подія';
+        const cat = ev.Category || 'Подія';
+        const desc = ev.Description || '';
+        const price = ev.Price || '';
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.setAttribute('role','listitem');
+        card.innerHTML = `
+          <div class="card-img"><img loading="lazy" decoding="async" alt="${title}" src="${img}"></div>
+          <div class="card-body">
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:6px">
+              <span class="tag">📅 ${date}${time? ' · '+time:''}</span>
+              <span class="tag">🏷 ${cat}</span>
+            </div>
+            <h3 style="margin:6px 0 8px 0;font-size:18px">${title}</h3>
+            <p style="margin:0;color:var(--muted)">${desc}</p>
+            ${price? `<p style="margin:8px 0 0 0;color:var(--muted)"><b>Вартість:</b> ${price}</p>`:''}
+          </div>
+          <div class="card-actions">
+            <button class="btn" type="button">Додати в календар</button>
+            <button class="btn" type="button">Поділитись</button>
+          </div>
+        `;
+        const [btnIcs, btnShare] = card.querySelectorAll('.btn');
+        btnIcs.addEventListener('click', ()=> downloadICS(ev));
+        btnShare.addEventListener('click', ()=> shareEvent(ev));
+        list.appendChild(card);
+      }
+    }
+
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function toICSDate(dateStr, timeStr){
+      // returns local "floating" time as YYYYMMDDTHHMMSS
+      const d = new Date(dateStr + (timeStr? 'T'+timeStr : 'T09:00'));
+      return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00';
+    }
+    function downloadICS(ev){
+      const dtstart = toICSDate(ev.Date, ev.Time);
+      const dtend = toICSDate(ev.Date, ev.Time ? ev.Time : "10:30");
+      const uid = Date.now()+'@dk-horyshky';
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DK Horyshky//UA',
+        'BEGIN:VEVENT',
+        'UID:'+uid,
+        'DTSTAMP:'+dtstart,
+        'DTSTART:'+dtstart,
+        'DTEND:'+dtend,
+        'SUMMARY:'+ (ev.Title||'Подія'),
+        'DESCRIPTION:'+ (ev.Description||''),
+        'LOCATION:ДК «Хорішки»',
+        'END:VEVENT','END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'event.ics';
+      document.body.appendChild(a); a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1000);
+    }
+    async function shareEvent(ev){
+      const text = `${ev.Title||'Подія'} — ${ev.Date||''} ${ev.Time||''} у ДК «Хорішки».`;
+      const shareData = { title: 'ДК «Хорішки»', text, url: location.href+'#afisha' };
+      if(navigator.share){
+        try{ await navigator.share(shareData); }catch{}
+      }else{
+        await navigator.clipboard.writeText(shareData.url + "\n" + text);
+        alert('Посилання скопійовано!');
+      }
+    }
+
+    // Filters
+    ['q','from','category'].forEach(id => qs('#'+id).addEventListener('input', ()=> render(window.__events||[])));
+    qs('#reset').addEventListener('click', ()=>{
+      qs('#q').value=''; qs('#from').value=''; qs('#category').value='';
+      render(window.__events||[]);
+    });
+
+    // Service worker
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }
+
+    // Init
+    document.getElementById('year').textContent = new Date().getFullYear();
+    loadEvents().then(list => { window.__events = list; render(list); });
+  </script>
 </body>
 </html>

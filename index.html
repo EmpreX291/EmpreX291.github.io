@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ДК «Хорішки» — Афіша, гуртки, контакти</title>
-  <meta name="description" content="Офіційний сайт ДК «Хорішки». Афіша подій, гуртки, новини, контакти та оренда залу.">
+  <title>БК «Хорішки» — Афіша, гуртки, контакти</title>
+  <meta name="description" content="Офіційний сайт БК «Хорішки». Афіша подій, гуртки, новини, контакти та оренда залу.">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#2151d1">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='22' fill='%232151d1'/%3E%3Ctext x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='64' fill='white'%3E%D0%94%D0%9A%3C/text%3E%3C/svg%3E">
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://docs.google.com" crossorigin>
   <link rel="canonical" href="https://emprex291.github.io/">
   <meta property="og:url" content="https://emprex291.github.io/">
-  <meta property="og:title" content="ДК «Хорішки» — Афіша та гуртки">
+  <meta property="og:title" content="БК «Хорішки» — Афіша та гуртки">
   <meta property="og:description" content="Культурні події та гуртки у Хорішках.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop">
   <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +49,7 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="logo"><div class="logo-badge">ДК</div> ДК «Хорішки»</div>
+      <div class="logo"><div class="logo-badge">БК</div> БК «Хорішки»</div>
       <nav class="nav-links">
         <a href="#afisha" class="btn">Афіша</a>
         <a href="#clubs" class="btn">Гуртки</a>
@@ -157,7 +157,7 @@
       <div class="panel" id="contactForm">
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
           <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_subject" value="Заявка з сайту ДК «Хорішки»">
+          <input type="hidden" name="_subject" value="Заявка з сайту БК «Хорішки»">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <div>
               <label>Ваше ім’я</label>
@@ -182,7 +182,7 @@
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div>© <span id="year"></span> ДК «Хорішки». Усі права захищено.</div>
+      <div>© <span id="year"></span> БК «Хорішки». Усі права захищено.</div>
       <div style="display:flex;gap:8px">
         <a class="btn" target="_blank" rel="noopener noreferrer" href="https://t.me/">Telegram</a>
         <a class="btn" target="_blank" rel="noopener noreferrer" href="https://facebook.com/">Facebook</a>
@@ -205,10 +205,10 @@ const CONFIG = {
   CLUBS_GID:  "2048496614",
 
   // Карта
-  MAP_LAT: 49.0000,
-  MAP_LNG: 33.0000,
+  MAP_LAT: 49.37223286638658, 
+  MAP_LNG: 33.82324957392846,
   MAP_ZOOM: 15,
-  PLACE_NAME: "ДК «Хорішки»"
+  PLACE_NAME: "Хорішківський сільський будинок культури"
 };
 
 /** =====================
@@ -442,7 +442,7 @@ function downloadICS(ev){
 }
 async function shareEvent(ev){
   const text = `${ev.Title||'Подія'} — ${ev.Date||''} ${ev.Time||''} у ${CONFIG.PLACE_NAME}.`;
-  const shareData = { title: 'ДК «Хорішки»', text, url: location.href+'#afisha' };
+  const shareData = { title: 'БК «Хорішки»', text, url: location.href+'#afisha' };
   if(navigator.share){ try{ await navigator.share(shareData); }catch{} }
   else{ await navigator.clipboard.writeText(shareData.url + "\n" + text); alert('Посилання скопійовано!'); }
 }

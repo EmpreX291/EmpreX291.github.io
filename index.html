@@ -7,73 +7,43 @@
   <meta name="description" content="Офіційний сайт ДК «Хорішки». Афіша подій, гуртки, новини, контакти та оренда залу.">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#2151d1">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='22' fill='%232151d1'/%3E%3Ctext x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='64' fill='white'%3E%D0%94%D0%9A%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://docs.google.com" crossorigin>
-  <link rel="canonical" href="https://YOUR_USERNAME.github.io/YOUR_REPO/">
-  <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/">
+  <link rel="canonical" href="https://emprex291.github.io/">
+  <meta property="og:url" content="https://emprex291.github.io/">
   <meta property="og:title" content="ДК «Хорішки» — Афіша та гуртки">
   <meta property="og:description" content="Культурні події та гуртки у Хорішках.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop">
   <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg: #0b1220; --panel: #0f172a; --text: #e6ecff; --muted: #9fb3d5;
-      --brand:#2151d1; --brand-2:#3aa6ff; --ring: 0 0 0 2px rgba(58,166,255,.35), 0 10px 30px rgba(33,81,209,.25);
-    }
+    :root{ --bg:#0b1220; --panel:#0f172a; --text:#e6ecff; --muted:#9fb3d5; --brand:#2151d1; --brand-2:#3aa6ff; --ring:0 0 0 2px rgba(58,166,255,.35), 0 10px 30px rgba(33,81,209,.25);}
     [data-theme="light"]{ --bg:#f5f7ff; --panel:#fff; --text:#0f172a; --muted:#475569; --brand:#2151d1; --brand-2:#3aa6ff; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,18,32,.9), rgba(11,18,32,.6)); backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.08);}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none} img{max-width:100%;height:auto;display:block} .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,18,32,.9), rgba(11,18,32,.6));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0} .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
     .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800}
-    .nav-links{display:flex;gap:16px;align-items:center}
-    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.15);padding:10px 14px;border-radius:12px;transition:.2s;cursor:pointer}
-    .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:#fff}
+    .nav-links{display:flex;gap:16px;align-items:center} .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.15);padding:10px 14px;border-radius:12px;transition:.2s;cursor:pointer}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)} .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:#fff}
     .theme-toggle{border:1px solid rgba(255,255,255,.15);padding:8px 10px;border-radius:10px;cursor:pointer}
-    /* Hero */
-    .hero{position:relative;overflow:hidden}
-    .hero .bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;filter:brightness(.55) saturate(1.1);}
+    .hero{position:relative;overflow:hidden} .hero .bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;filter:brightness(.55) saturate(1.1);}
     .hero .overlay{position:absolute;inset:0;background:radial-gradient(50% 70% at 50% 20%, rgba(58,166,255,.35), transparent),linear-gradient(180deg, rgba(11,18,32,.0), var(--bg) 85%);}
-    .hero .inner{position:relative;padding:96px 0 40px}
-    .headline{font-size:clamp(28px,4vw,46px);line-height:1.1;font-weight:800;letter-spacing:.2px}
-    .sub{color:var(--muted);max-width:720px}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    /* Sections */
-    section{scroll-margin-top:80px;padding:40px 0}
-    h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 18px 0}
-    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
-    /* Events/Clubs */
-    .filters{display:grid;grid-template-columns:1fr 160px 160px auto;gap:10px;margin-bottom:14px}
-    .filters input,.filters select{width:100%;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit;padding:10px 12px;border-radius:12px;outline:0}
-    .filters input:focus,.filters select:focus{box-shadow:var(--ring)}
-    .events,.clubs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .hero .inner{position:relative;padding:96px 0 40px} .headline{font-size:clamp(28px,4vw,46px);line-height:1.1;font-weight:800;letter-spacing:.2px} .sub{color:var(--muted);max-width:720px} .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    section{scroll-margin-top:80px;padding:40px 0} h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 18px 0} .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    .filters{display:grid;grid-template-columns:1fr 160px 160px auto;gap:10px;margin-bottom:14px} .filters input,.filters select{width:100%;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit;padding:10px 12px;border-radius:12px;outline:0}
+    .filters input:focus,.filters select:focus{box-shadow:var(--ring)} .events,.clubs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     @media (max-width:920px){.events,.clubs{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}}
     @media (max-width:560px){.events,.clubs{grid-template-columns:1fr}.nav-links{display:none}}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-    .card-img{aspect-ratio:16/9;background:#0b1220;overflow:hidden}
-    .card-body{padding:12px}
-    .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:4px 8px}
-    .card-actions{display:flex;gap:8px;margin-top:auto;padding:12px}
-    .card-actions .btn{flex:1;justify-content:center}
-    /* Map & gallery */
-    .map{border:0;width:100%;height:340px;border-radius:16px}
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    @media (max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .gallery a{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
-    /* Lightbox */
-    dialog.lightbox{border:0;padding:0;background:rgba(0,0,0,.9);width:100%;height:100%}
-    dialog::backdrop{background:rgba(0,0,0,.85)}
-    .lightbox img{max-width:92vw;max-height:86vh;margin:auto;display:block}
-    /* Footer */
-    footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
-    :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
-    @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    .card-img{aspect-ratio:16/9;background:#0b1220;overflow:hidden} .card-body{padding:12px} .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:4px 8px}
+    .card-actions{display:flex;gap:8px;margin-top:auto;padding:12px} .card-actions .btn{flex:1;justify-content:center}
+    .map{border:0;width:100%;height:340px;border-radius:16px} .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px} @media (max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .gallery a{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)} dialog.lightbox{border:0;padding:0;background:rgba(0,0,0,.9);width:100%;height:100%} dialog::backdrop{background:rgba(0,0,0,.85)}
+    .lightbox img{max-width:92vw;max-height:86vh;margin:auto;display:block} .note{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px;margin:10px 0;color:var(--muted)}
+    .note.error{border-color:#ff7171;color:#ff9d9d} footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
+    :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px} @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
@@ -118,7 +88,8 @@
           <button id="resetEvents" class="btn" type="button">Скинути</button>
         </div>
         <div id="events" class="events" role="list"></div>
-        <div id="emptyEvents" style="display:none;color:var(--muted);padding:10px">Поки що немає подій за вашим фільтром.</div>
+        <div id="emptyEvents" class="note" style="display:none">Поки що немає подій за вашим фільтром.</div>
+        <div id="eventsError" class="note error" style="display:none"></div>
       </div>
     </div>
   </section>
@@ -140,7 +111,8 @@
           <button id="resetClubs" class="btn" type="button">Скинути</button>
         </div>
         <div id="clubsList" class="clubs" role="list"></div>
-        <div id="emptyClubs" style="display:none;color:var(--muted);padding:10px">Поки що немає гуртків за вашим фільтром.</div>
+        <div id="emptyClubs" class="note" style="display:none">Поки що немає гуртків за вашим фільтром.</div>
+        <div id="clubsError" class="note error" style="display:none"></div>
       </div>
     </div>
   </section>
@@ -220,13 +192,19 @@
 
 <script>
 /** =====================
-  * КОНФІГУРАЦІЯ (налаштуй під себе)
+  * КОНФІГУРАЦІЯ
   * ===================== */
 const CONFIG = {
-  // 1) CSV Google Sheets (опублікувати як "File → Share → Publish to web" і взяти посилання з output=csv)
-  EVENTS_CSV_URL: "https://docs.google.com/spreadsheets/d/12L5X_RRuvx7Uf25XmZClr3Zo-KmfS5pIrs4TdJzH0AY/export?format=csv&gid=1962718832",
-  CLUBS_CSV_URL:  "https://docs.google.com/spreadsheets/d/12L5X_RRuvx7Uf25XmZClr3Zo-KmfS5pIrs4TdJzH0AY/export?format=csv&gid=2048496614",
-  // 2) Координати установи (для карти)
+  // Публічні CSV-лінки, згенеровані з твого /pubhtml
+  EVENTS_PUB_CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8HWUpRCUDfWqzWFvzGV-oN2RQDZIRrPu3fn2XERUS40gOobu07_C438dwXk-UnbiZgDWc4q365kc2/pub?gid=1962718832&single=true&output=csv",
+  CLUBS_PUB_CSV_URL:  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8HWUpRCUDfWqzWFvzGV-oN2RQDZIRrPu3fn2XERUS40gOobu07_C438dwXk-UnbiZgDWc4q365kc2/pub?gid=2048496614&single=true&output=csv",
+
+  // Fallback додається лише якщо буде вказаний класичний sheetId
+  SHEET_ID: "",
+  EVENTS_GID: "1962718832",
+  CLUBS_GID:  "2048496614",
+
+  // Карта
   MAP_LAT: 49.0000,
   MAP_LNG: 33.0000,
   MAP_ZOOM: 15,
@@ -258,16 +236,16 @@ document.querySelectorAll('.gl').forEach(a=>{
 });
 
 /** =====================
-  * ДОПОМОЖНІ (CSV, мапінг полів)
+  * CSV: завантаження з кількома спробами
   * ===================== */
 function csvToJson(text){
-  const lines = text.replace(/^\\uFEFF/, '').split(/\\r?\\n/).filter(Boolean);
+  const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter(Boolean);
   const head = lines.shift().split(',').map(s=>s.trim());
   return lines.map(l => {
     const cols = []; let cur = '', inQ = false;
     for(let i=0;i<l.length;i++){
       const ch = l[i];
-      if(ch === '\"'){ inQ = !inQ; continue; }
+      if(ch === '"'){ inQ = !inQ; continue; }
       if(ch === ',' && !inQ){ cols.push(cur); cur=''; continue; }
       cur += ch;
     }
@@ -277,13 +255,26 @@ function csvToJson(text){
     return obj;
   });
 }
-async function loadCSV(url){
-  if(!url) return [];
-  try{
-    const res = await fetch(url, {cache:'no-store'});
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    return csvToJson(await res.text());
-  }catch(e){ console.warn('CSV load failed', e); return []; }
+async function tryFetchCsv(url){
+  const res = await fetch(url, {cache:'no-store', redirect:'follow'});
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  return csvToJson(await res.text());
+}
+async function loadCSVWithFallback(kind){
+  const pub = kind === 'events' ? CONFIG.EVENTS_PUB_CSV_URL : CONFIG.CLUBS_PUB_CSV_URL;
+  const gid = kind === 'events' ? CONFIG.EVENTS_GID : CONFIG.CLUBS_GID;
+  const candidates = [ pub && pub.trim() ];
+  if(CONFIG.SHEET_ID && CONFIG.SHEET_ID.trim()){
+    const base = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}`;
+    candidates.push(`${base}/gviz/tq?tqx=out:csv&gid=${gid}`);
+    candidates.push(`${base}/export?format=csv&gid=${gid}`);
+  }
+  const list = candidates.filter(Boolean);
+  let lastErr = null;
+  for(const u of list){
+    try{ return await tryFetchCsv(u); }catch(e){ lastErr = e; }
+  }
+  throw lastErr || new Error('CSV failed');
 }
 function pick(o, names){
   for(const n of names){
@@ -292,7 +283,7 @@ function pick(o, names){
     }
   } return "";
 }
-// Мапінг для Подій (Афіша)
+// Події
 function normalizeEvent(row){
   return {
     Title: pick(row, ['Title','Назва','Подія']),
@@ -305,7 +296,7 @@ function normalizeEvent(row){
     Public: pick(row, ['Public','Публічна','Показувати']) || 'TRUE'
   };
 }
-// Мапінг для Гуртків
+// Гуртки
 function normalizeClub(row){
   return {
     Title: pick(row, ['Title','Назва','Гурток']),
@@ -442,85 +433,53 @@ function downloadICS(ev){
   const dtend = toICSDate(ev.Date, ev.Time ? ev.Time : "10:30");
   const uid = Date.now()+'@dk-horyshky';
   const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DK Horyshky//UA',
-    'BEGIN:VEVENT',
-    'UID:'+uid,
-    'DTSTAMP:'+dtstart,
-    'DTSTART:'+dtstart,
-    'DTEND:'+dtend,
-    'SUMMARY:'+ (ev.Title||'Подія'),
-    'DESCRIPTION:'+ (ev.Description||''),
-    'LOCATION:'+ CONFIG.PLACE_NAME,
-    'END:VEVENT','END:VCALENDAR'].join('\\r\\n');
+    'BEGIN:VEVENT','UID:'+uid,'DTSTAMP:'+dtstart,'DTSTART:'+dtstart,'DTEND:'+dtend,
+    'SUMMARY:'+ (ev.Title||'Подія'),'DESCRIPTION:'+ (ev.Description||''),'LOCATION:'+ CONFIG.PLACE_NAME,'END:VEVENT','END:VCALENDAR'].join('\r\n');
   const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = 'event.ics';
-  document.body.appendChild(a); a.click();
+  const a = document.createElement('a'); a.href = url; a.download = 'event.ics'; document.body.appendChild(a); a.click();
   setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1000);
 }
 async function shareEvent(ev){
   const text = `${ev.Title||'Подія'} — ${ev.Date||''} ${ev.Time||''} у ${CONFIG.PLACE_NAME}.`;
   const shareData = { title: 'ДК «Хорішки»', text, url: location.href+'#afisha' };
-  if(navigator.share){
-    try{ await navigator.share(shareData); }catch{}
-  }else{
-    await navigator.clipboard.writeText(shareData.url + "\\n" + text);
-    alert('Посилання скопійовано!');
-  }
+  if(navigator.share){ try{ await navigator.share(shareData); }catch{} }
+  else{ await navigator.clipboard.writeText(shareData.url + "\n" + text); alert('Посилання скопійовано!'); }
 }
 
 /** =====================
   * ІНІЦІАЛІЗАЦІЯ ДАНИХ
   * ===================== */
 async function initData(){
-  // Завантажити події
-  const evRows = await loadCSV(CONFIG.EVENTS_CSV_URL);
-  const events = evRows.map(normalizeEvent);
-  window.__events = events;
-  renderEvents(events);
-
-  // Завантажити гуртки
-  const clubRows = await loadCSV(CONFIG.CLUBS_CSV_URL);
-  const clubs = clubRows.map(normalizeClub);
-  window.__clubs = clubs;
-  renderClubs(clubs);
+  try { const rows = await loadCSVWithFallback('events'); const events = rows.map(normalizeEvent); window.__events = events; renderEvents(events); }
+  catch(e){ const box = document.getElementById('eventsError'); box.style.display='block'; box.textContent='Не вдалося завантажити Афішу. Перевірте, що /pub?output=csv доступний.'; console.warn('Events CSV failed', e); }
+  try { const rows = await loadCSVWithFallback('clubs'); const clubs = rows.map(normalizeClub); window.__clubs = clubs; renderClubs(clubs); }
+  catch(e){ const box = document.getElementById('clubsError'); box.style.display='block'; box.textContent='Не вдалося завантажити Гуртки. Перевірте, що /pub?output=csv доступний.'; console.warn('Clubs CSV failed', e); }
 }
 
 /** =====================
   * ФІЛЬТРИ
   * ===================== */
 ['qEvents','fromEvents','categoryEvents'].forEach(id => document.getElementById(id).addEventListener('input', ()=> renderEvents(window.__events||[])));
-document.getElementById('resetEvents').addEventListener('click', ()=>{
-  document.getElementById('qEvents').value=''; document.getElementById('fromEvents').value=''; document.getElementById('categoryEvents').value='';
-  renderEvents(window.__events||[]);
-});
+document.getElementById('resetEvents').addEventListener('click', ()=>{ document.getElementById('qEvents').value=''; document.getElementById('fromEvents').value=''; document.getElementById('categoryEvents').value=''; renderEvents(window.__events||[]); });
 ['qClubs','dayClubs','ageClubs'].forEach(id => document.getElementById(id).addEventListener('input', ()=> renderClubs(window.__clubs||[])));
-document.getElementById('resetClubs').addEventListener('click', ()=>{
-  document.getElementById('qClubs').value=''; document.getElementById('dayClubs').value=''; document.getElementById('ageClubs').value='';
-  renderClubs(window.__clubs||[]);
-});
+document.getElementById('resetClubs').addEventListener('click', ()=>{ document.getElementById('qClubs').value=''; document.getElementById('dayClubs').value=''; document.getElementById('ageClubs').value=''; renderClubs(window.__clubs||[]); });
 
 /** =====================
-  * КАРТА (Google Maps embed без pb)
+  * КАРТА
   * ===================== */
-function mapEmbedSrc(lat,lng,zoom){
-  const q = encodeURIComponent(lat+','+lng);
-  return `https://www.google.com/maps?q=${q}&z=${zoom||15}&hl=uk&output=embed`;
-}
-function updateMap(){
-  const {MAP_LAT, MAP_LNG, MAP_ZOOM, PLACE_NAME} = CONFIG;
+function mapEmbedSrc(lat,lng,zoom){ const q = encodeURIComponent(lat+','+lng); return `https://www.google.com/maps?q=${q}&z=${zoom||15}&hl=uk&output=embed`; }
+function updateMap(){ const {MAP_LAT, MAP_LNG, MAP_ZOOM, PLACE_NAME} = CONFIG;
   document.getElementById('mapFrame').src = mapEmbedSrc(MAP_LAT, MAP_LNG, MAP_ZOOM);
   document.getElementById('gmDir').href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(PLACE_NAME)}%20@${MAP_LAT},${MAP_LNG}`;
-  document.getElementById('amDir').href = `https://maps.apple.com/?q=${encodeURIComponent(PLACE_NAME)}&ll=${MAP_LAT},${MAP_LNG}&z=${MAP_ZOOM}`;
-}
+  document.getElementById('amDir').href = `https://maps.apple.com/?q=${encodeURIComponent(PLACE_NAME)}&ll=${MAP_LAT},${MAP_LNG}&z=${MAP_ZOOM}`; }
 
 /** =====================
   * SERVICE WORKER + INIT
   * ===================== */
 if('serviceWorker' in navigator){ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }
 document.getElementById('year').textContent = new Date().getFullYear();
-updateMap();
-initData();
+updateMap(); initData();
 </script>
 </body>
 </html>

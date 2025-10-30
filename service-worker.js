@@ -1,7 +1,7 @@
-const CACHE = 'dk-horyshky-v3';
+const CACHE = 'dk-horyshky-v5';
 const ASSETS = [
   './',
-  './index.v3.html',
+  './index.v5.html',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png'
@@ -14,7 +14,7 @@ self.addEventListener('activate', e => {
 });
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
-  const isCSV = url.hostname.endsWith('docs.google.com') && url.search.includes('output=csv');
+  const isCSV = url.hostname.endsWith('docs.google.com') && (url.search.includes('output=csv') || url.search.includes('tqx=out:csv'));
   if(isCSV){
     e.respondWith((async()=>{
       const c = await caches.open(CACHE);

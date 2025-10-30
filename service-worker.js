@@ -1,7 +1,7 @@
-const CACHE = 'dk-horyshky-v2';
+const CACHE = 'dk-horyshky-v3';
 const ASSETS = [
   './',
-  './index.v2.html',
+  './index.v3.html',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png'

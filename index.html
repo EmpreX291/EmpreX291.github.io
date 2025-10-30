@@ -1,49 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="uk" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ДК «Хорішки» — Афіша, події, контакти</title>
-  <meta name="description" content="Офіційний сайт ДК «Хорішки». Афіша подій, новини, контакти та оренда залу.">
+  <title>ДК «Хорішки» — Афіша, гуртки, контакти</title>
+  <meta name="description" content="Офіційний сайт ДК «Хорішки». Афіша подій, гуртки, новини, контакти та оренда залу.">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#2151d1">
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://docs.google.com" crossorigin>
   <link rel="canonical" href="https://YOUR_USERNAME.github.io/YOUR_REPO/">
   <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/">
-  <meta property="og:title" content="ДК «Хорішки» — Афіша та події">
-  <meta property="og:description" content="Культурні події, концерти та гуртки у Хорішках.">
+  <meta property="og:title" content="ДК «Хорішки» — Афіша та гуртки">
+  <meta property="og:description" content="Культурні події та гуртки у Хорішках.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop">
   <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b1220;
-      --panel: #0f172a;
-      --text: #e6ecff;
-      --muted: #9fb3d5;
-      --brand: #2151d1;
-      --brand-2:#3aa6ff;
-      --ring: 0 0 0 2px rgba(58,166,255,.35), 0 10px 30px rgba(33,81,209,.25);
+      --bg: #0b1220; --panel: #0f172a; --text: #e6ecff; --muted: #9fb3d5;
+      --brand:#2151d1; --brand-2:#3aa6ff; --ring: 0 0 0 2px rgba(58,166,255,.35), 0 10px 30px rgba(33,81,209,.25);
     }
-    [data-theme="light"]{
-      --bg: #f5f7ff;
-      --panel: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --brand: #2151d1;
-      --brand-2:#3aa6ff;
-    }
+    [data-theme="light"]{ --bg:#f5f7ff; --panel:#fff; --text:#0f172a; --muted:#475569; --brand:#2151d1; --brand-2:#3aa6ff; }
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;height:auto;display:block}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{
-      position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,18,32,.9), rgba(11,18,32,.6));
-      backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.08);
-    }
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,18,32,.9), rgba(11,18,32,.6)); backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.08);}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
     .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
     .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800}
@@ -54,12 +38,7 @@
     .theme-toggle{border:1px solid rgba(255,255,255,.15);padding:8px 10px;border-radius:10px;cursor:pointer}
     /* Hero */
     .hero{position:relative;overflow:hidden}
-    .hero .bg{
-      position:absolute;inset:0;
-      background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop');
-      background-size:cover;background-position:center;
-      filter:brightness(.55) saturate(1.1);
-    }
+    .hero .bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;filter:brightness(.55) saturate(1.1);}
     .hero .overlay{position:absolute;inset:0;background:radial-gradient(50% 70% at 50% 20%, rgba(58,166,255,.35), transparent),linear-gradient(180deg, rgba(11,18,32,.0), var(--bg) 85%);}
     .hero .inner{position:relative;padding:96px 0 40px}
     .headline{font-size:clamp(28px,4vw,46px);line-height:1.1;font-weight:800;letter-spacing:.2px}
@@ -69,13 +48,13 @@
     section{scroll-margin-top:80px;padding:40px 0}
     h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 18px 0}
     .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
-    /* Events */
+    /* Events/Clubs */
     .filters{display:grid;grid-template-columns:1fr 160px 160px auto;gap:10px;margin-bottom:14px}
     .filters input,.filters select{width:100%;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit;padding:10px 12px;border-radius:12px;outline:0}
     .filters input:focus,.filters select:focus{box-shadow:var(--ring)}
-    .events{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    @media (max-width:920px){.events{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}}
-    @media (max-width:560px){.events{grid-template-columns:1fr}.nav-links{display:none}}
+    .events,.clubs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:920px){.events,.clubs{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.events,.clubs{grid-template-columns:1fr}.nav-links{display:none}}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
     .card-img{aspect-ratio:16/9;background:#0b1220;overflow:hidden}
     .card-body{padding:12px}
@@ -93,18 +72,17 @@
     .lightbox img{max-width:92vw;max-height:86vh;margin:auto;display:block}
     /* Footer */
     footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
-    /* A11y & motion */
     :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
     @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#afisha">Пропустити до контенту</a>
   <header>
     <div class="container nav">
       <div class="logo"><div class="logo-badge">ДК</div> ДК «Хорішки»</div>
       <nav class="nav-links">
         <a href="#afisha" class="btn">Афіша</a>
+        <a href="#clubs" class="btn">Гуртки</a>
         <a href="#contacts" class="btn">Контакти</a>
         <a href="#map" class="btn">Локація</a>
         <button id="themeBtn" class="theme-toggle" aria-label="Змінити тему">🌓</button>
@@ -117,11 +95,11 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="overlay"></div>
     <div class="container inner">
-      <h1 class="headline">Події, що об’єднують громаду</h1>
-      <p class="sub">Концерти, кіно, гуртки та свята в серці нашого села. Обирайте, бронюйте — і приходьте з родиною та друзями!</p>
+      <h1 class="headline">Події та гуртки для всієї громади</h1>
+      <p class="sub">Концерти, кіно, гуртки та свята. Обирайте за розкладом та приходьте з друзями!</p>
       <div class="cta">
         <a href="#afisha" class="btn primary">Переглянути афішу</a>
-        <a href="#contacts" class="btn">Написати нам</a>
+        <a href="#clubs" class="btn">Перейти до гуртків</a>
       </div>
     </div>
   </section>
@@ -131,19 +109,38 @@
       <h2>Афіша</h2>
       <div class="panel">
         <div class="filters">
-          <input id="q" type="search" placeholder="Пошук подій (назва, опис)…" aria-label="Пошук">
-          <input id="from" type="date" aria-label="Від дати">
-          <select id="category" aria-label="Категорія">
+          <input id="qEvents" type="search" placeholder="Пошук подій…" aria-label="Пошук">
+          <input id="fromEvents" type="date" aria-label="Від дати">
+          <select id="categoryEvents" aria-label="Категорія">
             <option value="">Усі категорії</option>
-            <option>Концерт</option>
-            <option>Кіно</option>
-            <option>Гурток</option>
-            <option>Свято</option>
+            <option>Концерт</option><option>Кіно</option><option>Гурток</option><option>Свято</option>
           </select>
-          <button id="reset" class="btn" type="button">Скинути</button>
+          <button id="resetEvents" class="btn" type="button">Скинути</button>
         </div>
         <div id="events" class="events" role="list"></div>
-        <div id="empty" style="display:none;color:var(--muted);padding:10px">Поки що немає подій за вашим фільтром.</div>
+        <div id="emptyEvents" style="display:none;color:var(--muted);padding:10px">Поки що немає подій за вашим фільтром.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clubs">
+    <div class="container">
+      <h2>Гуртки</h2>
+      <div class="panel">
+        <div class="filters">
+          <input id="qClubs" type="search" placeholder="Пошук гуртків…" aria-label="Пошук">
+          <select id="dayClubs" aria-label="День тижня">
+            <option value="">Будь-який день</option>
+            <option>Пн</option><option>Вт</option><option>Ср</option><option>Чт</option><option>Пт</option><option>Сб</option><option>Нд</option>
+          </select>
+          <select id="ageClubs" aria-label="Вік">
+            <option value="">Будь-який вік</option>
+            <option>Діти</option><option>Підлітки</option><option>Дорослі</option><option>Усі</option>
+          </select>
+          <button id="resetClubs" class="btn" type="button">Скинути</button>
+        </div>
+        <div id="clubsList" class="clubs" role="list"></div>
+        <div id="emptyClubs" style="display:none;color:var(--muted);padding:10px">Поки що немає гуртків за вашим фільтром.</div>
       </div>
     </div>
   </section>
@@ -153,16 +150,16 @@
       <h2>Галерея</h2>
       <div class="gallery">
         <a href="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop" class="gl">
-          <img loading="lazy" decoding="async" alt="Сцена" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop">
+          <img loading="lazy" decoding="async" alt="Сцена" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop'">
         </a>
         <a href="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1600&auto=format&fit=crop" class="gl">
-          <img loading="lazy" decoding="async" alt="Зал" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600&auto=format&fit=crop">
+          <img loading="lazy" decoding="async" alt="Зал" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1515165562835-c3b8a954b45a?q=80&w=600&auto=format&fit=crop'">
         </a>
-        <a href="https://images.unsplash.com/photo-1540030521459-3c041aa4b7f2?q=80&w=1600&auto=format&fit=crop" class="gl">
-          <img loading="lazy" decoding="async" alt="Свято" src="https://images.unsplash.com/photo-1540030521459-3c041aa4b7f2?q=80&w=600&auto=format&fit=crop">
+        <a href="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1600&auto=format&fit=crop" class="gl">
+          <img loading="lazy" decoding="async" alt="Свято" src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop'">
         </a>
         <a href="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1600&auto=format&fit=crop" class="gl">
-          <img loading="lazy" decoding="async" alt="Гурток" src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=600&auto=format&fit=crop">
+          <img loading="lazy" decoding="async" alt="Гурток" src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1529336953121-ad2a0b81f2b0?q=80&w=600&auto=format&fit=crop'">
         </a>
       </div>
     </div>
@@ -173,14 +170,10 @@
     <div class="container">
       <h2>Де ми знаходимось</h2>
       <div class="panel">
-        <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10101.0!2d33.0!3d49.0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0KXQvtC70LHQtdC60LAg0JrRgNC10LHQsNC30LjRjw!5e0!3m2!1suk!2sua!4v1680000000000">
-        </iframe>
+        <iframe id="mapFrame" class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-          <a class="btn" target="_blank" rel="noopener noreferrer"
-             href="https://www.google.com/maps/dir/?api=1&destination=ДК%20Хорішки">Прокласти маршрут</a>
-          <a class="btn" target="_blank" rel="noopener noreferrer"
-             href="https://maps.apple.com/?q=ДК%20Хорішки">Відкрити в Apple Maps</a>
+          <a class="btn" target="_blank" rel="noopener noreferrer" id="gmDir">Прокласти маршрут</a>
+          <a class="btn" target="_blank" rel="noopener noreferrer" id="amDir">Відкрити в Apple Maps</a>
         </div>
       </div>
     </div>
@@ -207,7 +200,7 @@
           <textarea name="message" required rows="4" style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit"></textarea>
           <div class="cta" style="margin-top:10px">
             <button class="btn primary" type="submit">Надіслати</button>
-            <a class="btn" href="mailto:dk.horyshky@example.com">Написати на e‑mail</a>
+            <a class="btn" href="mailto:dk.horyshky@example.com">Написати на e-mail</a>
             <a class="btn" href="tel:+380000000000">Подзвонити</a>
           </div>
         </form>
@@ -225,176 +218,309 @@
     </div>
   </footer>
 
-  <script>
-    // Theme toggle
-    const root = document.documentElement;
-    const savedTheme = localStorage.getItem('theme');
-    if(savedTheme) root.setAttribute('data-theme', savedTheme);
-    document.getElementById('themeBtn').addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
+<script>
+/** =====================
+  * КОНФІГУРАЦІЯ (налаштуй під себе)
+  * ===================== */
+const CONFIG = {
+  // 1) CSV Google Sheets (опублікувати як "File → Share → Publish to web" і взяти посилання з output=csv)
+  EVENTS_CSV_URL: "https://docs.google.com/spreadsheets/d/12L5X_RRuvx7Uf25XmZClr3Zo-KmfS5pIrs4TdJzH0AY/export?format=csv&gid=1962718832",
+  CLUBS_CSV_URL:  "https://docs.google.com/spreadsheets/d/12L5X_RRuvx7Uf25XmZClr3Zo-KmfS5pIrs4TdJzH0AY/export?format=csv&gid=2048496614",
+  // 2) Координати установи (для карти)
+  MAP_LAT: 49.0000,
+  MAP_LNG: 33.0000,
+  MAP_ZOOM: 15,
+  PLACE_NAME: "ДК «Хорішки»"
+};
 
-    // Lightbox
-    const lb = document.getElementById('lightbox');
-    document.querySelectorAll('.gl').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        lb.querySelector('img').src = a.href;
-        lb.showModal();
-      });
-    });
+/** =====================
+  * ТЕМА
+  * ===================== */
+const root = document.documentElement;
+const savedTheme = localStorage.getItem('theme');
+if(savedTheme) root.setAttribute('data-theme', savedTheme);
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
 
-    // Events data: CSV or window.events
-    const EVENTS_CSV_URL = ""; // <- вставь сюди публічний CSV Google Sheets або залиш без змін, якщо використовуєш window.events
-    const fallbackEvents = [
-      { Title: "Концерт до Дня села", Date: "2025-11-15", Time: "18:00", Category: "Концерт", Description: "Святковий виступ місцевих колективів.", Price: "Вхід вільний" },
-      { Title: "Кіно-вечір", Date: "2025-11-20", Time: "19:00", Category: "Кіно", Description: "Сімейний фільм у великому залі.", Price: "50 грн" },
-      { Title: "Майстер-клас з малювання", Date: "2025-11-22", Time: "14:00", Category: "Гурток", Description: "Для дітей 7–12 років.", Price: "Безкоштовно" }
-    ];
+/** =====================
+  * ЛАЙТБОКС
+  * ===================== */
+const lb = document.getElementById('lightbox');
+document.querySelectorAll('.gl').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    lb.querySelector('img').src = a.href;
+    lb.showModal();
+  });
+});
 
-    const qs = s => document.querySelector(s);
-    const qsa = s => Array.from(document.querySelectorAll(s));
-
-    function csvToJson(text){
-      const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter(Boolean);
-      const head = lines.shift().split(',').map(s=>s.trim());
-      return lines.map(l => {
-        const cols = []; let cur = '', inQ = false;
-        for(let i=0;i<l.length;i++){
-          const ch = l[i];
-          if(ch === '"'){ inQ = !inQ; continue; }
-          if(ch === ',' && !inQ){ cols.push(cur); cur=''; continue; }
-          cur += ch;
-        }
-        cols.push(cur);
-        const obj = {};
-        head.forEach((h,idx)=>obj[h]= (cols[idx]||'').trim());
-        return obj;
-      });
+/** =====================
+  * ДОПОМОЖНІ (CSV, мапінг полів)
+  * ===================== */
+function csvToJson(text){
+  const lines = text.replace(/^\\uFEFF/, '').split(/\\r?\\n/).filter(Boolean);
+  const head = lines.shift().split(',').map(s=>s.trim());
+  return lines.map(l => {
+    const cols = []; let cur = '', inQ = false;
+    for(let i=0;i<l.length;i++){
+      const ch = l[i];
+      if(ch === '\"'){ inQ = !inQ; continue; }
+      if(ch === ',' && !inQ){ cols.push(cur); cur=''; continue; }
+      cur += ch;
     }
-
-    async function loadEvents(){
-      try{
-        if(Array.isArray(window.events)) return window.events;
-        if(EVENTS_CSV_URL){
-          const res = await fetch(EVENTS_CSV_URL, {cache:'no-store'});
-          if(!res.ok) throw new Error('HTTP '+res.status);
-          return csvToJson(await res.text());
-        }
-      }catch(e){ console.warn('CSV load failed', e); }
-      return fallbackEvents;
+    cols.push(cur);
+    const obj = {};
+    head.forEach((h,idx)=>obj[h]= (cols[idx]||'').trim());
+    return obj;
+  });
+}
+async function loadCSV(url){
+  if(!url) return [];
+  try{
+    const res = await fetch(url, {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    return csvToJson(await res.text());
+  }catch(e){ console.warn('CSV load failed', e); return []; }
+}
+function pick(o, names){
+  for(const n of names){
+    for(const k in o){
+      if(k.toLowerCase() === n.toLowerCase()) return o[k];
     }
+  } return "";
+}
+// Мапінг для Подій (Афіша)
+function normalizeEvent(row){
+  return {
+    Title: pick(row, ['Title','Назва','Подія']),
+    Date:  pick(row, ['Date','Дата']),
+    Time:  pick(row, ['Time','Час']),
+    Category: pick(row, ['Category','Категорія','Тип']),
+    Description: pick(row, ['Description','Опис']),
+    Price: pick(row, ['Price','Вартість','Ціна','Квиток']),
+    Image: pick(row, ['Image','Зображення','Фото']),
+    Public: pick(row, ['Public','Публічна','Показувати']) || 'TRUE'
+  };
+}
+// Мапінг для Гуртків
+function normalizeClub(row){
+  return {
+    Title: pick(row, ['Title','Назва','Гурток']),
+    Days:  pick(row, ['Days','Дні','Розклад','День']),
+    Time:  pick(row, ['Time','Час']),
+    Age:   pick(row, ['Age','Вік','Група']),
+    Level: pick(row, ['Level','Рівень']),
+    Description: pick(row, ['Description','Опис']),
+    Price: pick(row, ['Price','Вартість','Ціна']),
+    Teacher: pick(row, ['Teacher','Тренер','Викладач']),
+    Contact: pick(row, ['Contact','Контакт','Телефон','Email']),
+    Image: pick(row, ['Image','Зображення','Фото']),
+    Public: pick(row, ['Public','Публічна','Показувати']) || 'TRUE'
+  };
+}
+function isPublicFlag(val){
+  const s = String(val||'').trim().toLowerCase();
+  return s === '' || s === 'true' || s === '1' || s === 'так' || s === 'yes';
+}
 
-    function render(events){
-      const q = qs('#q').value.toLowerCase();
-      const from = qs('#from').value ? new Date(qs('#from').value) : null;
-      const cat = qs('#category').value;
-      const list = qs('#events');
-      const empty = qs('#empty');
-      list.innerHTML = '';
+/** =====================
+  * РЕНДЕР: Афіша
+  * ===================== */
+function renderEvents(events){
+  const q = document.getElementById('qEvents').value.toLowerCase();
+  const from = document.getElementById('fromEvents').value ? new Date(document.getElementById('fromEvents').value) : null;
+  const cat = document.getElementById('categoryEvents').value;
+  const list = document.getElementById('events');
+  const empty = document.getElementById('emptyEvents');
+  list.innerHTML = '';
 
-      const filtered = events.filter(ev => {
-        const text = (ev.Title||'') + ' ' + (ev.Description||'');
-        const okQ = !q || text.toLowerCase().includes(q);
-        const okC = !cat || (ev.Category||'').toLowerCase() === cat.toLowerCase();
-        const d = ev.Date ? new Date(ev.Date) : null;
-        const okD = !from || (d && d >= from);
-        return okQ && okC && okD;
-      });
+  const filtered = events.filter(ev => isPublicFlag(ev.Public)).filter(ev => {
+    const text = (ev.Title||'') + ' ' + (ev.Description||'');
+    const okQ = !q || text.toLowerCase().includes(q);
+    const okC = !cat || (ev.Category||'').toLowerCase() === cat.toLowerCase();
+    const d = ev.Date ? new Date(ev.Date) : null;
+    const okD = !from || (d && d >= from);
+    return okQ && okC && okD;
+  }).sort((a,b)=> (a.Date||'').localeCompare(b.Date||''));
 
-      empty.style.display = filtered.length ? 'none' : 'block';
+  empty.style.display = filtered.length ? 'none' : 'block';
 
-      filtered.sort((a,b)=> (a.Date||'').localeCompare(b.Date||''));
+  for(const ev of filtered){
+    const img = ev.Image || "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop";
+    const date = ev.Date || '';
+    const time = ev.Time || '';
+    const title = ev.Title || 'Подія';
+    const category = ev.Category || 'Подія';
+    const desc = ev.Description || '';
+    const price = ev.Price || '';
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.setAttribute('role','listitem');
+    card.innerHTML = `
+      <div class="card-img"><img loading="lazy" decoding="async" alt="${title}" src="${img}" onerror="this.src='https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop'"></div>
+      <div class="card-body">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:6px">
+          <span class="tag">📅 ${date}${time? ' · '+time:''}</span>
+          <span class="tag">🏷 ${category}</span>
+        </div>
+        <h3 style="margin:6px 0 8px 0;font-size:18px">${title}</h3>
+        <p style="margin:0;color:var(--muted)">${desc}</p>
+        ${price? `<p style="margin:8px 0 0 0;color:var(--muted)"><b>Вартість:</b> ${price}</p>`:''}
+      </div>
+      <div class="card-actions">
+        <button class="btn" type="button">Додати в календар</button>
+        <button class="btn" type="button">Поділитись</button>
+      </div>
+    `;
+    const [btnIcs, btnShare] = card.querySelectorAll('.btn');
+    btnIcs.addEventListener('click', ()=> downloadICS(ev));
+    btnShare.addEventListener('click', ()=> shareEvent(ev));
+    list.appendChild(card);
+  }
+}
 
-      for(const ev of filtered){
-        const img = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop";
-        const date = ev.Date || '';
-        const time = ev.Time || '';
-        const title = ev.Title || 'Подія';
-        const cat = ev.Category || 'Подія';
-        const desc = ev.Description || '';
-        const price = ev.Price || '';
-        const card = document.createElement('article');
-        card.className = 'card';
-        card.setAttribute('role','listitem');
-        card.innerHTML = `
-          <div class="card-img"><img loading="lazy" decoding="async" alt="${title}" src="${img}"></div>
-          <div class="card-body">
-            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:6px">
-              <span class="tag">📅 ${date}${time? ' · '+time:''}</span>
-              <span class="tag">🏷 ${cat}</span>
-            </div>
-            <h3 style="margin:6px 0 8px 0;font-size:18px">${title}</h3>
-            <p style="margin:0;color:var(--muted)">${desc}</p>
-            ${price? `<p style="margin:8px 0 0 0;color:var(--muted)"><b>Вартість:</b> ${price}</p>`:''}
-          </div>
-          <div class="card-actions">
-            <button class="btn" type="button">Додати в календар</button>
-            <button class="btn" type="button">Поділитись</button>
-          </div>
-        `;
-        const [btnIcs, btnShare] = card.querySelectorAll('.btn');
-        btnIcs.addEventListener('click', ()=> downloadICS(ev));
-        btnShare.addEventListener('click', ()=> shareEvent(ev));
-        list.appendChild(card);
-      }
-    }
+/** =====================
+  * РЕНДЕР: Гуртки
+  * ===================== */
+function renderClubs(clubs){
+  const q = document.getElementById('qClubs').value.toLowerCase();
+  const day = document.getElementById('dayClubs').value.toLowerCase();
+  const age = document.getElementById('ageClubs').value.toLowerCase();
+  const list = document.getElementById('clubsList');
+  const empty = document.getElementById('emptyClubs');
+  list.innerHTML = '';
 
-    function pad(n){ return String(n).padStart(2,'0'); }
-    function toICSDate(dateStr, timeStr){
-      // returns local "floating" time as YYYYMMDDTHHMMSS
-      const d = new Date(dateStr + (timeStr? 'T'+timeStr : 'T09:00'));
-      return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00';
-    }
-    function downloadICS(ev){
-      const dtstart = toICSDate(ev.Date, ev.Time);
-      const dtend = toICSDate(ev.Date, ev.Time ? ev.Time : "10:30");
-      const uid = Date.now()+'@dk-horyshky';
-      const ics = [
-        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DK Horyshky//UA',
-        'BEGIN:VEVENT',
-        'UID:'+uid,
-        'DTSTAMP:'+dtstart,
-        'DTSTART:'+dtstart,
-        'DTEND:'+dtend,
-        'SUMMARY:'+ (ev.Title||'Подія'),
-        'DESCRIPTION:'+ (ev.Description||''),
-        'LOCATION:ДК «Хорішки»',
-        'END:VEVENT','END:VCALENDAR'
-      ].join('\r\n');
-      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'event.ics';
-      document.body.appendChild(a); a.click();
-      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1000);
-    }
-    async function shareEvent(ev){
-      const text = `${ev.Title||'Подія'} — ${ev.Date||''} ${ev.Time||''} у ДК «Хорішки».`;
-      const shareData = { title: 'ДК «Хорішки»', text, url: location.href+'#afisha' };
-      if(navigator.share){
-        try{ await navigator.share(shareData); }catch{}
-      }else{
-        await navigator.clipboard.writeText(shareData.url + "\n" + text);
-        alert('Посилання скопійовано!');
-      }
-    }
+  const filtered = clubs.filter(ev => isPublicFlag(ev.Public)).filter(ev => {
+    const text = (ev.Title||'') + ' ' + (ev.Description||'') + ' ' + (ev.Teacher||'');
+    const okQ = !q || text.toLowerCase().includes(q);
+    const okDay = !day || (ev.Days||'').toLowerCase().includes(day);
+    const okAge = !str(age) || (ev.Age||'').toLowerCase().includes(age);
+    return okQ && okDay && okAge;
+  }).sort((a,b)=> (a.Title||'').localeCompare(b.Title||''));
 
-    // Filters
-    ['q','from','category'].forEach(id => qs('#'+id).addEventListener('input', ()=> render(window.__events||[])));
-    qs('#reset').addEventListener('click', ()=>{
-      qs('#q').value=''; qs('#from').value=''; qs('#category').value='';
-      render(window.__events||[]);
-    });
+  empty.style.display = filtered.length ? 'none' : 'block';
 
-    // Service worker
-    if('serviceWorker' in navigator){ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }
+  for(const c of filtered){
+    const img = c.Image || "https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=800&auto=format&fit=crop";
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.setAttribute('role','listitem');
+    card.innerHTML = `
+      <div class="card-img"><img loading="lazy" decoding="async" alt="${c.Title||'Гурток'}" src="${img}" onerror="this.src='https://images.unsplash.com/photo-1529336953121-ad2a0b81f2b0?q=80&w=800&auto=format&fit=crop'"></div>
+      <div class="card-body">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px">
+          ${c.Days? `<span class="tag">📅 ${c.Days}</span>`:''}
+          ${c.Time? `<span class="tag">⏰ ${c.Time}</span>`:''}
+          ${c.Age? `<span class="tag">👥 ${c.Age}</span>`:''}
+          ${c.Level? `<span class="tag">⭐ ${c.Level}</span>`:''}
+        </div>
+        <h3 style="margin:6px 0 8px 0;font-size:18px">${c.Title||'Гурток'}</h3>
+        ${c.Teacher? `<p style="margin:0;color:var(--muted)"><b>Керівник:</b> ${c.Teacher}</p>`:''}
+        <p style="margin:6px 0 0 0;color:var(--muted)">${c.Description||''}</p>
+        ${c.Price? `<p style="margin:8px 0 0 0;color:var(--muted)"><b>Вартість:</b> ${c.Price}</p>`:''}
+        ${c.Contact? `<p style="margin:8px 0 0 0;color:var(--muted)"><b>Контакт:</b> ${c.Contact}</p>`:''}
+      </div>
+    `;
+    list.appendChild(card);
+  }
+}
+function str(s){ return String(s||'').trim(); }
 
-    // Init
-    document.getElementById('year').textContent = new Date().getFullYear();
-    loadEvents().then(list => { window.__events = list; render(list); });
-  </script>
+/** =====================
+  * ICS + Share
+  * ===================== */
+function pad(n){ return String(n).padStart(2,'0'); }
+function toICSDate(dateStr, timeStr){
+  const d = new Date((dateStr||'') + (timeStr? 'T'+timeStr : 'T09:00'));
+  return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00';
+}
+function downloadICS(ev){
+  const dtstart = toICSDate(ev.Date, ev.Time);
+  const dtend = toICSDate(ev.Date, ev.Time ? ev.Time : "10:30");
+  const uid = Date.now()+'@dk-horyshky';
+  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DK Horyshky//UA',
+    'BEGIN:VEVENT',
+    'UID:'+uid,
+    'DTSTAMP:'+dtstart,
+    'DTSTART:'+dtstart,
+    'DTEND:'+dtend,
+    'SUMMARY:'+ (ev.Title||'Подія'),
+    'DESCRIPTION:'+ (ev.Description||''),
+    'LOCATION:'+ CONFIG.PLACE_NAME,
+    'END:VEVENT','END:VCALENDAR'].join('\\r\\n');
+  const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'event.ics';
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1000);
+}
+async function shareEvent(ev){
+  const text = `${ev.Title||'Подія'} — ${ev.Date||''} ${ev.Time||''} у ${CONFIG.PLACE_NAME}.`;
+  const shareData = { title: 'ДК «Хорішки»', text, url: location.href+'#afisha' };
+  if(navigator.share){
+    try{ await navigator.share(shareData); }catch{}
+  }else{
+    await navigator.clipboard.writeText(shareData.url + "\\n" + text);
+    alert('Посилання скопійовано!');
+  }
+}
+
+/** =====================
+  * ІНІЦІАЛІЗАЦІЯ ДАНИХ
+  * ===================== */
+async function initData(){
+  // Завантажити події
+  const evRows = await loadCSV(CONFIG.EVENTS_CSV_URL);
+  const events = evRows.map(normalizeEvent);
+  window.__events = events;
+  renderEvents(events);
+
+  // Завантажити гуртки
+  const clubRows = await loadCSV(CONFIG.CLUBS_CSV_URL);
+  const clubs = clubRows.map(normalizeClub);
+  window.__clubs = clubs;
+  renderClubs(clubs);
+}
+
+/** =====================
+  * ФІЛЬТРИ
+  * ===================== */
+['qEvents','fromEvents','categoryEvents'].forEach(id => document.getElementById(id).addEventListener('input', ()=> renderEvents(window.__events||[])));
+document.getElementById('resetEvents').addEventListener('click', ()=>{
+  document.getElementById('qEvents').value=''; document.getElementById('fromEvents').value=''; document.getElementById('categoryEvents').value='';
+  renderEvents(window.__events||[]);
+});
+['qClubs','dayClubs','ageClubs'].forEach(id => document.getElementById(id).addEventListener('input', ()=> renderClubs(window.__clubs||[])));
+document.getElementById('resetClubs').addEventListener('click', ()=>{
+  document.getElementById('qClubs').value=''; document.getElementById('dayClubs').value=''; document.getElementById('ageClubs').value='';
+  renderClubs(window.__clubs||[]);
+});
+
+/** =====================
+  * КАРТА (Google Maps embed без pb)
+  * ===================== */
+function mapEmbedSrc(lat,lng,zoom){
+  const q = encodeURIComponent(lat+','+lng);
+  return `https://www.google.com/maps?q=${q}&z=${zoom||15}&hl=uk&output=embed`;
+}
+function updateMap(){
+  const {MAP_LAT, MAP_LNG, MAP_ZOOM, PLACE_NAME} = CONFIG;
+  document.getElementById('mapFrame').src = mapEmbedSrc(MAP_LAT, MAP_LNG, MAP_ZOOM);
+  document.getElementById('gmDir').href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(PLACE_NAME)}%20@${MAP_LAT},${MAP_LNG}`;
+  document.getElementById('amDir').href = `https://maps.apple.com/?q=${encodeURIComponent(PLACE_NAME)}&ll=${MAP_LAT},${MAP_LNG}&z=${MAP_ZOOM}`;
+}
+
+/** =====================
+  * SERVICE WORKER + INIT
+  * ===================== */
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }
+document.getElementById('year').textContent = new Date().getFullYear();
+updateMap();
+initData();
+</script>
 </body>
 </html>
